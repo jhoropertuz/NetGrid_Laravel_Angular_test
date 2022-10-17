@@ -1,0 +1,66 @@
+
+
+<div class="wrapper pt-5">
+    <div class="content ">
+        <form class="form-signin  form-row  text-center " [formGroup]="dataC" (ngSubmit)="actualizar(dataC.value)">
+            <div class="text-center mb-1 ">
+                <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png" style="width:15%">
+            </div>
+
+            <hr />
+
+            <div class="row">
+                <div class="form-group col-md-6 mt-2">
+                    <label for="nombres">Nombre</label>
+                    <input type="text" class="form-control" name="name" formControlName="name" placeholder="Nombre"
+                        required="" autofocus="">
+              </div>
+              <div class="form-group col-md-6 mt-2">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" formControlName="email" placeholder="email"
+                    required="" autofocus="">
+              </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mt-2">
+                    <label for="address">Dirección</label>
+                    <input type="text" class="form-control" name="address" formControlName="address" placeholder="Dirección"
+                         autofocus="">
+                  </div>
+                  <div class="form-group col-md-6 mt-2">
+                    <label for="birthdate">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" name="birthdate" formControlName="birthdate" placeholder="fecha de nacimiento"
+                        autofocus="">
+                  </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 mt-2">
+                    <label for="city">Ciudad</label>
+                    <input type="test" class="form-control" name="city" formControlName="city" placeholder="Ciudad"
+                        autofocus="">
+                  </div>
+
+
+            </div>
+            <div class="row">
+
+              <div class="col-12 mt-4"><h5>Si desea actualizar la contraseña, por favor llene los siguientes campos.</h5></div>
+              <div class="form-group col-md-6 mt-2">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" name="password" formControlName="password" placeholder="Contraseña"
+                  autofocus="">
+            </div>
+                <div class="form-group col-md-6 mt-2">
+                    <label for="confPassword">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" name="confPassword" formControlName="confPassword" placeholder="Confirmar Contraseña"
+                        autofocus="">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-primary btn-block mt-5" [disabled]="!dataC.valid">Actualizar</button>
+
+        </form>
+
+    </div>
+
+  </div>

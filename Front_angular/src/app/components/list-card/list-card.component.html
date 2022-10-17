@@ -1,0 +1,18 @@
+<div *ngIf="list" class="row   row-cols-sm-2  row-cols-md-6 g-4 m-5">
+
+   <div class="col" *ngFor="let item of list; let i = index">
+    <div class="card">
+      <img src="https://play-lh.googleusercontent.com/Y_TFr8xFCc_529AJMdpHuxD8zYMzQwXValEXeESS2pmlCNBaMsh1HPU3ZIATD5ljG2w" width="30" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+      </div>
+      <div class="card-footer text-muted">
+          <button type="button" class="btn btn-info mx-2" (click)="info(i+1)"><i class="bi bi-info-circle"></i></button>
+          <button type="button" class="btn btn-warning" id="btnFavorites-{{i}}"  *ngIf="type != 'favorites'" (click)="addFavorite(i)"><i class="bi bi-suit-heart"></i></button>
+        </div>
+    </div>
+  </div>
+  </div>
+  <div class="row text-center mt-2"*ngIf="!list.length">
+    <h5 class="text-center">{{message}}</h5>
+  </div>
